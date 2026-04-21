@@ -1284,7 +1284,7 @@
       <div class="container">
         <div class="section__head reveal">
           <span class="eyebrow">Como responder</span>
-          <h2>Cada resposta compõen sua estratégia o final.</h2>
+          <h2>Cada resposta compõem sua estratégia o final.</h2>
           <p class="lead">
             Em cada pergunta, marque apenas uma alternativa. No fim, você receberá dicas e métodos simples para iniciar.
            </p>
@@ -2106,8 +2106,7 @@
               <span class="eyebrow">Tema 10</span>
               <h3>Pergunta final de definição</h3>
               <p>
-                Esta é a pergunta de fechamento e também funciona como desempate.
-                Se houver empate entre perfis, a alternativa marcada aqui orienta a leitura final.
+                Essa orientação não substitui a avaliação de um profissional.
               </p>
               <p class="question-card__helper">
                 Hoje, qual deveria ser o seu foco principal?
@@ -2550,14 +2549,14 @@
         return {
           winner: tieBreaker,
           tieResolved: true,
-          tieMessage: `Houve empate na contagem principal. A pergunta 10 foi usada como desempate e direcionou o resultado para o perfil ${tieBreaker}.`
+          tieMessage: `Conteúdo orientativo e educativo. Não substitui a avalição de um profissional. ${tieBreaker}.`
         };
       }
 
       return {
         winner: tiedLetters[0],
         tieResolved: true,
-        tieMessage: `Houve empate. Como não foi possível usar o desempate final, o sistema assumiu o primeiro perfil empatado como referência.`
+        tieMessage: `Conteúdo orientativo e educativo. Não substitui a avalição de um profissional.`
       };
     }
 
