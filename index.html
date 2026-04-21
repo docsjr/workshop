@@ -222,31 +222,10 @@
       padding: 56px 0 90px;
     }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: -100px;
-      right: -90px;
-      width: 360px;
-      height: 360px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(244, 122, 32, 0.14), transparent 65%);
-      pointer-events: none;
-      filter: blur(8px);
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      bottom: -120px;
-      left: -90px;
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(31, 107, 92, 0.14), transparent 65%);
-      pointer-events: none;
-      filter: blur(8px);
-    }
+   
+.hero::after {
+  content: none;
+}
 
     .hero__grid {
       display: grid;
@@ -420,15 +399,8 @@
     }
 
     .hero__panel::after {
-      content: "";
-      position: absolute;
-      inset: auto -80px -100px auto;
-      width: 260px;
-      height: 260px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(244, 122, 32, 0.18), transparent 64%);
-      pointer-events: none;
-    }
+  content: none;
+}
 
     .panel-kicker {
       display: inline-flex;
@@ -858,16 +830,9 @@
       overflow: hidden;
     }
 
-    .tracker-card::after {
-      content: "";
-      position: absolute;
-      inset: auto -100px -120px auto;
-      width: 280px;
-      height: 280px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(244, 122, 32, 0.18), transparent 65%);
-      pointer-events: none;
-    }
+   .tracker-card::after {
+  content: none;
+}
 
     .result-card {
       background: rgba(255,255,255,0.92);
@@ -1117,64 +1082,213 @@
     }
 
     @media (max-width: 760px) {
-      .section {
-        padding: 78px 0;
-      }
+  .section {
+    padding: 56px 0;
+  }
 
-      .section--tight {
-        padding: 62px 0;
-      }
+  .section--tight {
+    padding: 44px 0;
+  }
 
-      .topbar__meta .meta-pill {
-        display: none;
-      }
+  .topbar__inner {
+    min-height: 62px;
+    gap: 12px;
+  }
 
-      .hero {
-        padding: 36px 0 76px;
-      }
+  .brand__name {
+    font-size: 1rem;
+  }
 
-      .hero__actions,
-      .quiz-actions {
-        width: 100%;
-      }
+  .brand__sub {
+    font-size: 0.76rem;
+    max-width: 30ch;
+    line-height: 1.4;
+  }
 
-      .hero__actions .btn,
-      .quiz-actions .btn,
-      .sticky-cta .btn {
-        width: 100%;
-      }
+  .topbar__meta .meta-pill {
+    display: none;
+  }
 
-      .grid-2,
-      .grid-3,
-      .score-row {
-        grid-template-columns: 1fr;
-      }
+  .hero {
+    padding: 24px 0 48px;
+  }
 
-      .score-row {
-        gap: 8px;
-      }
+  h1 {
+    font-size: clamp(2rem, 9vw, 2.7rem);
+    max-width: 12ch;
+  }
 
-      .question-card,
-      .tracker-card,
-      .result-card {
-        border-radius: 24px;
-        padding: 22px;
-      }
+  h2 {
+    font-size: clamp(1.55rem, 6vw, 2rem);
+    max-width: 16ch;
+  }
 
-      .option label {
-        grid-template-columns: 42px 1fr;
-        padding: 14px;
-      }
+  h3 {
+    font-size: 1.05rem;
+  }
 
-      .sticky-cta {
-        display: grid;
-      }
+  p,
+  .lead {
+    font-size: 0.96rem;
+    line-height: 1.68;
+  }
 
-      .footer {
-        padding-bottom: 118px;
-      }
-    }
-  </style>
+  .eyebrow {
+    padding: 7px 11px;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+  }
+
+  .hero__details {
+    display: none;
+  }
+
+  .hero__grid,
+  .summary-grid,
+  .question-card,
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .hero__panel,
+  .tracker-card,
+  .result-card,
+  .question-card,
+  .card,
+  .legend-card {
+    padding: 18px;
+    border-radius: 20px;
+    box-shadow: 0 10px 24px rgba(14, 34, 56, 0.06);
+  }
+
+  .section__head {
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .question-card__content {
+    gap: 10px;
+  }
+
+  .question-title {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .question-meta {
+    gap: 8px;
+    margin-bottom: 0;
+  }
+
+  .question-index,
+  .question-count {
+    font-size: 0.8rem;
+  }
+
+  .option label {
+    grid-template-columns: 38px 1fr;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 16px;
+    box-shadow: none;
+  }
+
+  .option-badge {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    font-size: 0.92rem;
+  }
+
+  .option-title {
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+
+  .option-desc {
+    font-size: 0.86rem;
+    line-height: 1.45;
+  }
+
+  .subpoints {
+    gap: 8px;
+  }
+
+  .subpoints li {
+    font-size: 0.92rem;
+    padding-left: 16px;
+  }
+
+  .inline-pills,
+  .hero__actions,
+  .quiz-actions {
+    gap: 10px;
+  }
+
+  .pill,
+  .detail,
+  .meta-pill {
+    padding: 8px 11px;
+    font-size: 0.82rem;
+  }
+
+  .btn {
+    min-height: 48px;
+    padding: 0 16px;
+    font-size: 0.92rem;
+  }
+
+  .scoreboard {
+    gap: 10px;
+  }
+
+  .score-row {
+    grid-template-columns: 30px 1fr 22px;
+    gap: 8px;
+  }
+
+  .score-name {
+    display: none;
+  }
+
+  .letter-badge {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 0.84rem;
+  }
+
+  .result-fields {
+    gap: 10px;
+  }
+
+  .result-item {
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .result-item h4 {
+    font-size: 0.78rem;
+    margin-bottom: 6px;
+  }
+
+  .result-item p {
+    font-size: 0.93rem;
+    line-height: 1.6;
+  }
+
+  .motivation {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+    .footer {
+    padding: 26px 0 40px;
+  }
+}  </style>
 </head>
 <body>
   <div class="progress" aria-hidden="true">
@@ -2363,15 +2477,7 @@
     </div>
   </footer>
 
-  <div class="sticky-cta">
-    <div>
-      <small>Workshop interativo DocLiv</small>
-      <strong>Responda tudo e veja seu foco principal sugerido</strong>
-    </div>
-    <a class="btn btn--primary" href="#resultado">Meu resultado</a>
-  </div>
-
-  <script>
+    <script>
     const profiles = {
       A: {
         name: "Metabolismo desorganizado",
